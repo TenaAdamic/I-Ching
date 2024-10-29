@@ -272,6 +272,7 @@ const IChingGame = () => {
   const [lines, setLines] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [finalHexagram, setFinalHexagram] = useState("");
+  const [isTossing, setIsTossing] = useState(false);
 
   const flipCoin = () => {
     if (tossCount >= 6) return; // Stop after 6 tosses
@@ -320,17 +321,25 @@ const IChingGame = () => {
   };
 
   const animateCoins = () => {
-    const coinElements = document.querySelectorAll(".coin-image");
-    coinElements.forEach((coin) => {
-      coin.style.transform = "rotateY(360deg)";
-    });
+    setIsTossing(true);
 
     setTimeout(() => {
-      coinElements.forEach((coin) => {
-        coin.style.transform = "";
-      });
-    }, 300);
+      setIsTossing(false); // Reset after the animation duration
+    }, 600); // Match the duration in Tailwind
   };
+
+  // const animateCoins = () => {
+  //   const coinElements = document.querySelectorAll(".coin-image");
+  //   coinElements.forEach((coin) => {
+  //     coin.style.transform = "rotateY(360deg)";
+  //   });
+
+  //   setTimeout(() => {
+  //     coinElements.forEach((coin) => {
+  //       coin.style.transform = "";
+  //     });
+  //   }, 300);
+  // };
 
   const handleHexagramClick = () => {
     if (tossCount === 6) setShowModal(true);
@@ -354,7 +363,17 @@ const IChingGame = () => {
             key={index}
             src={image}
             alt={`Coin ${index + 1}`}
-            className="w-20 md:w-40 transition-transform duration-300 coin-image"
+            className={`w-20 md:w-40 transition-transform duration-500 ${
+              isTossing ? "rotate-class" : ""
+            }`}
+            style={{
+              transform: isTossing
+                ? `rotateY(${
+                    720 + Math.floor(Math.random() * 360)
+                  }deg) rotateX(${360 + Math.floor(Math.random() * 180)}deg)`
+                : "",
+              transition: "transform 0.6s ease-in-out",
+            }}
           />
         ))}
       </div>
