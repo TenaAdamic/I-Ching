@@ -274,6 +274,15 @@ const IChingGame = () => {
   const [finalHexagram, setFinalHexagram] = useState("");
   const [isTossing, setIsTossing] = useState(false);
 
+  const resetGame = () => {
+    setCoinImages([Head, Head, Head]);
+    setTossCount(0);
+    setLines([]);
+    setShowModal(false);
+    setFinalHexagram("");
+    setIsTossing(false);
+  };
+
   const flipCoin = () => {
     if (tossCount >= 6) return; // Stop after 6 tosses
 
@@ -378,13 +387,37 @@ const IChingGame = () => {
         ))}
       </div>
 
-      <button
-        onClick={flipCoin}
-        className="mt-4 mb-0 bg-lightBlue text-tealCustom py-2 px-3 md:px-4 rounded-[8px] border-4 border-tealCustom 
-          cursor-pointer hover:bg-lightCyan transition-colors duration-300 shadow-md hover:shadow-lg"
-      >
-        Toss Coins
-      </button>
+      {tossCount < 6 ? (
+        <button
+          onClick={flipCoin}
+          className="mt-4 mb-0 bg-lightBlue text-tealCustom py-2 px-3 md:px-4 rounded-[8px] border-4 border-tealCustom 
+            cursor-pointer hover:bg-lightCyan transition-colors duration-300 shadow-md hover:shadow-lg"
+        >
+          Toss Coins
+        </button>
+      ) : (
+        <button
+          onClick={resetGame}
+          className="mt-4 mb-0 bg-lightBlue text-tealCustom py-2 px-3 md:px-4 rounded-[8px] border-4 border-tealCustom 
+            cursor-pointer hover:bg-lightCyan transition-colors duration-300 shadow-md hover:shadow-lg"
+          title="Start New Reading"
+        >
+          <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            width="24" 
+            height="24" 
+            viewBox="0 0 24 24" 
+            fill="none" 
+            stroke="currentColor" 
+            strokeWidth="2" 
+            strokeLinecap="round" 
+            strokeLinejoin="round"
+            className="inline-block"
+          >
+            <path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.3"/>
+          </svg>
+        </button>
+      )}
 
       {tossCount > 0 && (
         <div

@@ -79,7 +79,7 @@ function App() {
 
                     <span>
                       <strong className="font-semibold text-gray-900">
-                        Toss the coins—six times.
+                        Toss the coins 6 times.
                       </strong>{" "}
                       Each toss reveals either a solid line (Yang) or a broken
                       line (Yin). Click{" "}
