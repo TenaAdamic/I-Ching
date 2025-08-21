@@ -12,7 +12,7 @@ function App() {
   return (
     <div>
       <div className="relative">
-        <div className="mx-auto max-w-7xl lg:flex lg:justify-between lg:px-8 xl:justify-end mb-0 bg-stone-100">
+        <div className="w-full lg:flex lg:justify-between lg:px-8 xl:justify-end mb-0 bg-stone-100">
           <div className="lg:flex lg:w-1/2 lg:shrink lg:grow-0 xl:absolute xl:inset-y-0 xl:right-1/2 xl:w-1/2">
             <div className="relative h-80 bg-stone-100 lg:-ml-8 lg:h-auto lg:w-full lg:grow xl:ml-0 p-0 m-0 overflow-hidden">
               <img
@@ -23,7 +23,7 @@ function App() {
             </div>
           </div>
           <div className="px-6 lg:contents">
-            <div className="mx-auto max-w-2xl pb-24 pt-16 sm:pb-32 sm:pt-20 lg:ml-8 lg:mr-0 lg:w-full lg:max-w-lg lg:flex-none lg:pt-32 xl:w-1/2">
+            <div className="mx-auto max-w-2xl pb-24 pt-16 sm:pb-32 sm:pt-20 lg:ml-0 lg:mr-0 lg:w-full lg:max-w-lg lg:flex-none lg:pt-32 xl:w-1/2">
               <p className="text-4xl font-semibold leading-7 text-tealCustom font-serif">
                 I Ching
               </p>

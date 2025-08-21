@@ -357,7 +357,7 @@ const IChingGame = () => {
   const closeModal = () => setShowModal(false);
 
   return (
-    <div className="container text-center bg-white p-6 md:p-12 rounded-lg mx-auto">
+    <div className="w-full text-center bg-white p-6 md:p-12">
       <h1 className="mb-6 md:mb-12 mt-8 md:mt-16 text-2xl md:text-4xl font-bold tracking-tight text-gray-900 font-lora">
         Play I Ching
       </h1>
@@ -451,7 +451,7 @@ const IChingGame = () => {
 
       {showModal && (
         <div className="fixed inset-0 bg-gray-600 bg-opacity-50 flex justify-center items-center">
-          <div className="bg-white p-4 md:p-8 rounded-lg shadow-lg max-w-sm md:max-w-lg w-full h-auto max-h-[80vh] overflow-y-auto">
+          <div className="bg-white p-4 md:p-8 rounded-2xl shadow-lg max-w-sm md:max-w-lg w-full h-auto max-h-[80vh] overflow-y-auto">
             {finalHexagram && (
               <>
                 <h3 className="text-lg md:text-xl font-semibold text-center mb-2 md:mb-4">
