@@ -32,9 +32,9 @@ function App() {
               </h1>
               <p className="mt-6 text-xl leading-8 text-gray-700 italic">
                 The I Ching is a reminder that life is in motion. Balance isn’t
-                about controlling the tides—it’s about riding them, knowing when
-                to move and when to wait. Toss the coins, and let the wisdom of
-                Yin and Yang show you where your potential lies.
+                about controlling the tides, it’s about riding them, knowing
+                when to move and when to wait. Toss the coins, and let the
+                wisdom of Yin and Yang show you where your potential lies.
               </p>
               <div className="mt-10 max-w-xl text-base leading-7 text-gray-700 lg:max-w-none">
                 <p>
@@ -42,11 +42,11 @@ function App() {
                   for divination based on the idea that the universe is in
                   constant motion, a dance between two fundamental forces: Yin
                   and Yang. Yin is soft, receptive, and hidden potential. Yang
-                  is sharp, direct, and active energy. Every situation—whether
-                  it’s love, work, or personal growth—contains both of these
+                  is sharp, direct, and active energy. Every situation, whether
+                  it’s love, work, or personal growth, contains both of these
                   energies. The key is finding their balance. Will you lean into
                   action or pause and let things unfold? The I Ching helps you
-                  feel that out. It’s a guide to the now—offering clarity about
+                  feel that out. It’s a guide to the now, offering clarity about
                   what could happen if you align yourself with the natural flow
                   of things.
                 </p>
@@ -64,7 +64,7 @@ function App() {
                         Form your question.
                       </strong>{" "}
                       The I Ching doesn’t answer with “yes” or “no.” It explores
-                      possibilities and potentials—like Yin and Yang shifting
+                      possibilities and potentials, like Yin and Yang shifting
                       through every moment. Think of a question that lets you
                       reflect: “What needs my attention right now?” or “Should I
                       push forward, or wait for things to reveal themselves?”
@@ -87,9 +87,9 @@ function App() {
                         Toss Coins
                       </span>{" "}
                       six times, working from the bottom to the top, until
-                      you’ve built a hexagram—your snapshot of the situation’s
-                      Yin-Yang balance. Some lines may call for bold action;
-                      others may tell you to stay still and receive.
+                      you’ve built a hexagram, your snapshot of the situation’s
+                      Yin-Yang balance. Some lines may call for bold action
+                      while others may tell you to stay still and receive.
                     </span>
                   </li>
                   <li className="flex gap-x-3">
